@@ -14,5 +14,5 @@ first byte represent number of characters
 
 types of strings
 
-- &str
-- String
+- &str - can be in binary, stack, heap. size is dynamic. string slice. use in case you need a immutable view of string.
+- String - std library, stored in heap. use in case you want to own the data and maniplulate it.

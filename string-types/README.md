@@ -32,3 +32,10 @@
 - heap-allocated string size
 - usefull when freeze a string to prevent furture modification. by dropping extra capicity info. in String type
 - usecase in apis which return owned string which is not modified further or to save memory aggresivly to imp. prefromance
+
+### Rc<str>
+
+- shared
+- Immutable string slice
+- without cloning data
+- only stored once in memory no clone is created while referencing

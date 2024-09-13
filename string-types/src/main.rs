@@ -1,3 +1,4 @@
+use std::borrow::Cow;
 use std::sync::Arc;
 use std::thread;
 use std::rc::Rc;
@@ -48,4 +49,17 @@ fn main() {
         handle.join().unwrap();
     }
 
+    //Cow<'a, str>
+    let bad_word: &str = "you are a badword";
+    println!("sanitizing: {}", sanitize(bad_word));
+
+
+}
+
+fn sanitize(word: &str) -> Cow<str>{
+    if word.contains("badword"){
+        let sanitized: String = word.replace("badword", "******");
+        return Cow::Owned(sanitized);
+    }
+    Cow::Borrowed(word)
 }

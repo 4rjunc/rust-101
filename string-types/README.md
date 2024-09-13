@@ -47,3 +47,13 @@
 - shared
 - Immutable string slice
 - usefull when you have to share a data with multiple threads without cloning data
+
+### Cow<'a, str>
+
+- Copy On Write
+- used in functions that modifies a string other times it doesn't. Avoid memory allocation if no modification is neseccssery
+- Use cases for `Cow<str>`:
+  - API Design: When you want to provide a flexible API that can work with both borrowed and owned strings.
+  - Caching: When you want to cache a potentially modified version of a string without always allocating.
+  - Optimizing Allocations: In scenarios where you might need to modify a string, but often don't.
+  - Serialization/Deserialization: Libraries like serde use Cow<str> to efficiently handle string data that may or may not need to be owned.

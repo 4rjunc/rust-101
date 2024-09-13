@@ -39,3 +39,11 @@
 - Immutable string slice
 - without cloning data
 - only stored once in memory no clone is created while referencing
+
+### Arc<str>
+
+- atomic reference counted
+- thread safe
+- shared
+- Immutable string slice
+- usefull when you have to share a data with multiple threads without cloning data

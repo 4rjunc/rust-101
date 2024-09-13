@@ -1,3 +1,5 @@
+use std::sync::Arc;
+use std::thread;
 use std::rc::Rc;
 
 fn main() {
@@ -30,5 +32,20 @@ fn main() {
     println!("another_reference_1: {}", another_reference_1);
     println!("another_reference_2: {}", another_reference_2);
 
+    //Arc<str>
+    let shared_string = Arc::new("Hello, concurrent world!");
+    
+    let mut handles = vec![];
+
+    for i in 0..5 {
+        let clone = Arc::clone(&shared_string);
+        handles.push(thread::spawn(move || {
+            println!("Thread {}: {}", i, clone);
+        }));
+    }
+
+    for handle in handles {
+        handle.join().unwrap();
+    }
 
 }

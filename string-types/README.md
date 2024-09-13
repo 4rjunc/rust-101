@@ -11,7 +11,7 @@
 - Growable
 - UTF-8 encoded
 - usefull when create/modify the strings
-  ![String]("./String.png")
+  ![String](./String.png)
 - This format helps in easier manipulation
 
 ### &str
@@ -23,7 +23,7 @@
 - access data in heap or in binary or in stack (rare but possible)
 - Read/analyze strings
 - command arguments, or searching for a substring
-  ![str]("./str.png")
+  ![str](./str.png)
 
 ### Box<str>
 

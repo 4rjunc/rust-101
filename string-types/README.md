@@ -24,3 +24,11 @@
 - Read/analyze strings
 - command arguments, or searching for a substring
   ![str]("./str.png")
+
+### Box<str>
+
+- owned
+- not Growable
+- heap-allocated string size
+- usefull when freeze a string to prevent furture modification. by dropping extra capicity info. in String type
+- usecase in apis which return owned string which is not modified further or to save memory aggresivly to imp. prefromance

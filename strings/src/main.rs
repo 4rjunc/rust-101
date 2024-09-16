@@ -5,6 +5,8 @@ fn main() {
 
 
     //concatination 1
+    // :: operator allows us to namespace this pariticular from function
+    // under the String type. 
     let mut greeting = String::from("Hello");
     greeting.push_str(" World!");
     println!("greeting: {}", greeting);

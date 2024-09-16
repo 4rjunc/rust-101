@@ -49,6 +49,9 @@ fn main() {
     } else {
         println!("The string is empty");
     }
-
-
+    
+    // heap data transfers ownership. other copies data
+    // let a = String::from("Arjun");
+    // let b = a;
+    // println!("b:{}, a:{}",b, a);
 }

@@ -54,4 +54,7 @@ fn main() {
     // let a = String::from("Arjun");
     // let b = a;
     // println!("b:{}, a:{}",b, a);
+    // let a: &str = "Hello Worl";
+    // let b: &str = a;
+    // println!("a:{}, b:{}", a, b);
 }

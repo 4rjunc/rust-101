@@ -20,6 +20,10 @@ impl Rectangle {
     fn area(&self) -> u32{
         self.width * self.height
     }
+
+    fn can_fit(&self, other: &Rectangle) -> bool{
+        self.width > other.width && self.height > other.height
+    }
 }
 
 
@@ -56,6 +60,12 @@ fn main() {
 
     println!("Area of rectangle: {}", rectangle_area(&rectangle));
     println!("Area of rectangle using method: {}", rectangle.area());
+
+    let rectangle2 = Rectangle{
+        width: 15,
+        height: 20
+    };
+    println!("Size fit: {}", rectangle2.can_fit(&rectangle));
 }
 
 fn rectangle_area(rectangle: &Rectangle) -> u32 {

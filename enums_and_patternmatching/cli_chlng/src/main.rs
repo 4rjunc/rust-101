@@ -80,7 +80,7 @@ fn main() {
         match parse_command(&input) {
            Ok(command) => execute_command(command),
             Err(err) => println!("Error: {}", err),
-        }
+       }
     }
 }
 

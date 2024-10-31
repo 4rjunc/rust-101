@@ -20,8 +20,7 @@ fn parse_command(input: &str) -> Result<Commands, String>{
             if parts.len() < 2 {
                 return  Err("The 'say' command requires a message".to_string());
             }
-            Ok(Commands::Say(parts[1..].join(" ")))
-        },
+            Ok(Commands::Say(parts[1..].join(" "))) },
         "add" => {
             if parts.len() != 3 {
                 return  Err("The 'add' command requires exactly 2 numbers".to_string());

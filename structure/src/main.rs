@@ -66,7 +66,15 @@ fn main() {
         height: 20
     };
     println!("Size fit: {}", rectangle2.can_fit(&rectangle));
+
+    // Matrix
+    let matrix1 = Matrix{e11: 12,e12: 6, e21: 7,e22: 8};
+    let matrix2 = Matrix{e11: 3,e12: 4, e21: 1,e22: 0};
+
+    let sum  = matrix1.add(&matrix2);
+    sum.display();
 }
+
 
 fn rectangle_area(rectangle: &Rectangle) -> u32 {
     return rectangle.width * rectangle.height;
@@ -74,4 +82,30 @@ fn rectangle_area(rectangle: &Rectangle) -> u32 {
 
 fn create_user(username: String, email: String) -> User  {
     User { active: true, username,  email, sign_in_count: 1 }
+}
+
+#[derive(Debug)]
+struct Matrix{
+    e11: i32,
+    e12: i32,
+    e21: i32,
+    e22: i32,
+}
+
+impl Matrix {
+    fn add(&self, other: &Matrix) -> Matrix{
+        Matrix{
+            e11: self.e11 + other.e11,
+            e12: self.e12 + other.e12,
+            e21: self.e21 + other.e21,
+            e22: self.e22 + other.e22,
+        }
+    }
+
+    fn display(&self){
+        println!("[{} {}]", &self.e11, &self.e12);
+        println!("[{} {}]", &self.e21, &self.e22);
+    }
+
+    
 }

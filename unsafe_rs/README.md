@@ -17,3 +17,4 @@ unsafe{
 
 * `unsafe` does't turn off borrow checker or rust saftey check 
 
+- unsafe functions should be called inside unsafe functions or unsafe keywords

@@ -1,4 +1,5 @@
 ## Why unsafe rust?
+- do something that rust does't allow you to do
 - static analysis is concervative my nature: rust will follows its own rules to validate a program is memory safe or not. even if a developer know a code is memory safe but rust rejects it because of its rules
 - if underlying computer hardware is inherently unsafe: so if you want to code in that device you should break the rules of rust
 

@@ -1,3 +1,19 @@
+// Define a trait: a collection of method signatures
+trait Animal {
+    fn speak(&self) -> &str;
+}
+
+// Struct that implements the Animal trait
+struct Dog;
+struct Cat;
+
+// Implement the trait for Dog
+impl Animal for Dog {
+    fn speak(&self) -> &str {
+        "Woof 🐶"
+    }
+}
+
 // Implement the trait for Cat
 impl Animal for Cat {
     fn speak(&self) -> &str {

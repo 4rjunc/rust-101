@@ -1,6 +1,10 @@
 // Define a trait: a collection of method signatures
 trait Animal {
     fn speak(&self) -> &str;
+
+    fn who_am_i(&self) {
+        println!("Im an animal")
+    }
 }
 
 // Struct that implements the Animal trait
@@ -33,4 +37,7 @@ fn main() {
     // Trait objects allow calling methods on different types through the same interface
     animal_sound(&dog);
     animal_sound(&cat);
+
+    dog.who_am_i();
+    cat.who_am_i();
 }
